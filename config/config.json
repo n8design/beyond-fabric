@@ -25,12 +25,21 @@
           "manifest": "./src/webparts/theSmartGrid/TheSmartGridWebPart.manifest.json"
         }
       ]
+    },
+    "the-default-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/theDefault/TheDefaultWebPart.js",
+          "manifest": "./src/webparts/theDefault/TheDefaultWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "TheGridWebPartStrings": "lib/webparts/theGrid/loc/{locale}.js",
     "TheFlexBoxWebPartStrings": "lib/webparts/theFlexBox/loc/{locale}.js",
-    "TheSmartGridWebPartStrings": "lib/webparts/theSmartGrid/loc/{locale}.js"
+    "TheSmartGridWebPartStrings": "lib/webparts/theSmartGrid/loc/{locale}.js",
+    "TheDefaultWebPartStrings": "lib/webparts/theDefault/loc/{locale}.js"
   }
 }
