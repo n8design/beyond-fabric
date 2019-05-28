@@ -1,0 +1,25 @@
+$c-yellow: $ms-color-yellow;
+$c-orange: $ms-color-orange;
+$c-red: $ms-color-red;
+$c-teal: $ms-color-teal;
+$c-blue: $ms-color-blue;
+
+:global {
+  .ms-Dialog-main {
+    display: none !important;
+  }
+
+  .ms-Modal {
+    display: none !important;
+  }
+
+  .pageContent_a2454af4 {
+    // max-width: 100%;
+  }
+
+  .content_7b590e14 {
+    overflow: unset;
+    overflow-y: unset;
+
+  }
+}

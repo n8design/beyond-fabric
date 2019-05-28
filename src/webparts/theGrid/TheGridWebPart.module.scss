@@ -1,0 +1,101 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import '../global/styles/override';
+
+
+/* autoprefixer grid: on */
+
+
+.theGrid {
+
+  display: grid;
+  width: 100%;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 32px;
+
+  grid-template-rows: repeat(3, 1fr);
+
+  @media screen and (min-width: 0) and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+
+    grid-template-rows: repeat(8, 1fr);
+  }
+
+  transition: all 0.5s ease-in-out;
+
+}
+
+%box {
+  padding: 1em;
+  font-weight: $ms-font-weight-bold;
+  text-transform: uppercase;
+  color: black;
+  border: 5px black solid;
+  text-align: center;
+  background-color: white;
+  transition: all 0.2s ease-in-out,
+    background 0.5s ease-in-out,
+    color 1s ease-in-out 0.25s,
+    transform 2s ease-in-out,
+    border 0.5s ease-in-out;
+}
+
+.box1 {
+
+  background-color: lime;
+  @extend %box;
+  border-color: $c-yellow;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+
+  &:hover{
+    transform: scale(1.1);
+    background-color: black;
+    border-color: $c-orange;
+    color: white;
+    z-index: 100;
+    grid-row: 1 / span 4;
+    transform: rotateY(180deg);
+  }
+
+  @media screen and (min-width: 0) and (max-width: 800px) {
+    grid-column: 1 / auto;
+    grid-row: 1 / span 2;
+  }
+}
+
+.box2 {
+  @extend %box;
+  border-color: $c-orange;
+  grid-column: 3 / auto;
+  grid-row: 1 / span 2;
+  @media screen and (min-width: 0) and (max-width: 800px) {
+    grid-column: 1 / auto;
+    grid-row: auto;
+  }
+}
+
+.box3 {
+  @extend %box;
+  border-color: $c-red;
+  @media screen and (min-width: 0) and (max-width: 800px) {
+    grid-column: 1 / auto;
+  }
+}
+
+.box4 {
+  @extend %box;
+  border-color: $c-teal;
+  @media screen and (min-width: 0) and (max-width: 800px) {
+    grid-column: 1 / auto;
+  }
+}
+
+.box5 {
+  @extend %box;
+  border-color: $c-blue;
+  @media screen and (min-width: 0) and (max-width: 800px) {
+    grid-column: 1 / auto;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "the-grid-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/theGrid/TheGridWebPart.js",
+          "manifest": "./src/webparts/theGrid/TheGridWebPart.manifest.json"
+        }
+      ]
+    },
+    "the-flex-box-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/theFlexBox/TheFlexBoxWebPart.js",
+          "manifest": "./src/webparts/theFlexBox/TheFlexBoxWebPart.manifest.json"
+        }
+      ]
+    },
+    "the-smart-grid-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/theSmartGrid/TheSmartGridWebPart.js",
+          "manifest": "./src/webparts/theSmartGrid/TheSmartGridWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "TheGridWebPartStrings": "lib/webparts/theGrid/loc/{locale}.js",
+    "TheFlexBoxWebPartStrings": "lib/webparts/theFlexBox/loc/{locale}.js",
+    "TheSmartGridWebPartStrings": "lib/webparts/theSmartGrid/loc/{locale}.js"
+  }
+}

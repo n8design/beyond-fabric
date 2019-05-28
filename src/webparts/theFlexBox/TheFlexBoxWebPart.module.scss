@@ -1,0 +1,32 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import '../global/styles/override';
+
+.theFlexBox {
+  content: '';
+}
+
+.theList {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.theItem {
+  background-color: $c-orange;
+  color: white;
+  padding: 0.4em 1em 0.5em;
+  border: 2px $c-yellow solid;
+  font-size: 3em;
+  font-weight: 900;
+  min-width: 20%;
+  &:before{
+    position: relative;
+    content: '';
+    padding-top: 100%;
+  }
+
+}

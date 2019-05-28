@@ -1,0 +1,24 @@
+{
+  "@pnp/generator-spfx": {
+    "framework": "none",
+    "pnpFramework": "none.plus",
+    "pnp-libraries": [
+      "rush@3.3"
+    ],
+    "pnp-ci": [],
+    "pnp-vetting": [],
+    "spfxenv": "spo",
+    "pnp-testing": []
+  },
+  "@microsoft/generator-sharepoint": {
+    "environment": "spo",
+    "framework": "none",
+    "isCreatingSolution": false,
+    "version": "1.8.2",
+    "libraryName": "beyondfabric",
+    "libraryId": "53ff7c7b-6cf4-47e0-8c90-ee4a686d2f13",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
