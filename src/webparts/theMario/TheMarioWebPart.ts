@@ -6,29 +6,39 @@ import {
 } from '@microsoft/sp-property-pane';
 import { escape } from '@microsoft/sp-lodash-subset';
 
-import styles from './TheFlexBoxWebPart.module.scss';
-import * as strings from 'TheFlexBoxWebPartStrings';
+import styles from './TheMarioWebPart.module.scss';
+import * as strings from 'TheMarioWebPartStrings';
 
-export interface ITheFlexBoxWebPartProps {
+export interface ITheMarioWebPartProps {
   description: string;
 }
 
-export default class TheFlexBoxWebPart extends BaseClientSideWebPart<ITheFlexBoxWebPartProps> {
+export default class TheMarioWebPart extends BaseClientSideWebPart<ITheMarioWebPartProps> {
 
   public render(): void {
+
+    var baseGrid = (() => {
+
+      let _baseGrid = "";
+
+      for(let i = 0; i < 265; i++){
+
+        _baseGrid += "<div></div>";
+
+      }
+
+      return _baseGrid;
+
+    })();
+
     this.domElement.innerHTML = `
-      <div class="${ styles.theFlexBox}">
-        <ul class="${styles.theList}">
-          <li class="${styles.theItem}">A</li>
-          <li class="${styles.theItem}">B</li>
-          <li class="${styles.theItem}" style="order: -1">C</li>
-          <li class="${styles.theItem}">D</li>
-          <li class="${styles.theItem}">E</li>
-          <li class="${styles.theItem}">F</li>
-          <li class="${styles.theItem}">G</li>
-          <li class="${styles.theItem}">H</li>
-        </ul>
-      </div>`;
+      <div class="${ styles.theMario }">
+        <section>
+        ${ baseGrid }
+        </section>
+      </div>
+      <div class="${ styles.credits }">Code Stolen from <a href="https://codepen.io/tungkradle/pen/GYwvyO">Tugradle</a></div>
+      `;
   }
 
   protected get dataVersion(): Version {

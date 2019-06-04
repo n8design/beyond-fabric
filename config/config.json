@@ -33,6 +33,30 @@
           "manifest": "./src/webparts/theDefault/TheDefaultWebPart.manifest.json"
         }
       ]
+    },
+    "the-default-opt-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/theDefaultOpt/TheDefaultOptWebPart.js",
+          "manifest": "./src/webparts/theDefaultOpt/TheDefaultOptWebPart.manifest.json"
+        }
+      ]
+    },
+    "tic-tac-grid-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/ticTacGrid/TicTacGridWebPart.js",
+          "manifest": "./src/webparts/ticTacGrid/TicTacGridWebPart.manifest.json"
+        }
+      ]
+    },
+    "the-mario-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/theMario/TheMarioWebPart.js",
+          "manifest": "./src/webparts/theMario/TheMarioWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -40,6 +64,9 @@
     "TheGridWebPartStrings": "lib/webparts/theGrid/loc/{locale}.js",
     "TheFlexBoxWebPartStrings": "lib/webparts/theFlexBox/loc/{locale}.js",
     "TheSmartGridWebPartStrings": "lib/webparts/theSmartGrid/loc/{locale}.js",
-    "TheDefaultWebPartStrings": "lib/webparts/theDefault/loc/{locale}.js"
+    "TheDefaultWebPartStrings": "lib/webparts/theDefault/loc/{locale}.js",
+    "TheDefaultOptWebPartStrings": "lib/webparts/theDefaultOpt/loc/{locale}.js",
+    "TicTacGridWebPartStrings": "lib/webparts/ticTacGrid/loc/{locale}.js",
+    "TheMarioWebPartStrings": "lib/webparts/theMario/loc/{locale}.js"
   }
 }

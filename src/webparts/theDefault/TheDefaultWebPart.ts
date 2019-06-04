@@ -6,28 +6,30 @@ import {
 } from '@microsoft/sp-property-pane';
 import { escape } from '@microsoft/sp-lodash-subset';
 
-import styles from './TheFlexBoxWebPart.module.scss';
-import * as strings from 'TheFlexBoxWebPartStrings';
+import styles from './TheDefaultWebPart.module.scss';
+import * as strings from 'TheDefaultWebPartStrings';
 
-export interface ITheFlexBoxWebPartProps {
+export interface ITheDefaultWebPartProps {
   description: string;
 }
 
-export default class TheFlexBoxWebPart extends BaseClientSideWebPart<ITheFlexBoxWebPartProps> {
+export default class TheDefaultWebPart extends BaseClientSideWebPart<ITheDefaultWebPartProps> {
 
   public render(): void {
     this.domElement.innerHTML = `
-      <div class="${ styles.theFlexBox}">
-        <ul class="${styles.theList}">
-          <li class="${styles.theItem}">A</li>
-          <li class="${styles.theItem}">B</li>
-          <li class="${styles.theItem}" style="order: -1">C</li>
-          <li class="${styles.theItem}">D</li>
-          <li class="${styles.theItem}">E</li>
-          <li class="${styles.theItem}">F</li>
-          <li class="${styles.theItem}">G</li>
-          <li class="${styles.theItem}">H</li>
-        </ul>
+      <div class="${ styles.theDefault }">
+        <div class="${ styles.container }">
+          <div class="${ styles.row }">
+            <div class="${ styles.column }">
+              <span class="${ styles.title }">Welcome to SharePoint!</span>
+              <p class="${ styles.subTitle }">Customize SharePoint experiences using Web Parts.</p>
+              <p class="${ styles.description }">${escape(this.properties.description)}</p>
+              <a href="https://aka.ms/spfx" class="${ styles.button }">
+                <span class="${ styles.label }">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>`;
   }
 

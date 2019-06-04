@@ -20,7 +20,8 @@
     "@microsoft/sp-property-pane": "1.8.2",
     "@microsoft/sp-webpart-base": "1.8.2",
     "@types/es6-promise": "0.0.33",
-    "@types/webpack-env": "1.13.1"
+    "@types/webpack-env": "1.13.1",
+    "office-ui-fabric-react": "^6.186.1"
   },
   "devDependencies": {
     "@microsoft/rush-stack-compiler-2.9": "0.7.7",
@@ -36,6 +37,7 @@
     "gulp": "~3.9.1",
     "gulp-sequence": "1.0.0",
     "jest": "^23.6.0",
+    "susy": "^3.0.5",
     "typescript": "~3.3.x"
   }
 }

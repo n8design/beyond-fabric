@@ -4,6 +4,13 @@ $c-red: $ms-color-red;
 $c-teal: $ms-color-teal;
 $c-blue: $ms-color-blue;
 
+$c-green: #a7bb38;
+$c-blue: #318eb1;
+$c-teal: #20a5ac;
+$c-yellow: #eeb405;
+$c-orange: #ee9105;
+$c-red: #dd314d;
+
 :global {
   .ms-Dialog-main {
     display: none !important;
@@ -17,9 +24,47 @@ $c-blue: $ms-color-blue;
     // max-width: 100%;
   }
 
-  .content_7b590e14 {
-    overflow: unset;
-    overflow-y: unset;
+  // .content_7b590e14 {
+  //   overflow: unset;
+  //   overflow-y: unset;
 
+  // }
+}
+
+
+@import 'node_modules/susy/sass/susy';
+@import 'node_modules/susy/sass/plugins/svg-grid';
+
+$susy: ('svg-grid-colors': hsl(180, 50%, 80%),
+  'columns': susy-repeat(12),
+  'gutters': 16px,
+  'spread': 'wide',
+);
+
+@mixin enableGridOverlay() {
+  :global {
+
+    .ControlZone-control {
+      background: susy-svg-grid();
+    }
+
+  }
+}
+
+@mixin optimizeWebpart($gridcolumns) {
+
+  // Set the CSS Module scope to global
+  :global {
+
+    // inject column setup here e.g. .CanvasSection-xl12
+    #{$gridcolumns} {
+
+      // switch again the scope to local for the web part
+      // ⚠️☠️ DO NOT ADD ANY OTHER STYLE IN HERE ☠️⚠️
+      :local {
+        // include content of mixin in here
+        @content;
+      }
+    }
   }
 }
