@@ -40,7 +40,7 @@
           }
 
           &:before {
-            content: "#{$i""$j}";
+            content: "";
             display: block;
             padding-top: 100%;
             z-index: -2;
@@ -59,7 +59,6 @@
           background-color: $c-orange;
 
           &:before {
-            content: "";
             font-size: 50px;
           }
         }
